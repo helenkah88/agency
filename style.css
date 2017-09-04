@@ -1,0 +1,592 @@
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('/fonts/Gotham Medium Regular/Gotham Medium Regular.ttf');
+}
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('/fonts/Gotham Bold/Gotham Bold.otf');
+}
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('/fonts/GothamBook/GothamBook.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto.ttf');
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/open-sans/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('/fonts/Myriad Pro Regular/Myriad Pro Regular.ttf');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    overflow: hidden;
+    color: #f5f5f5;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.letter {
+    display: block;
+    margin-bottom: -172px;
+    font-family: 'Roboto';
+    font-size: 247px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #5993b2;
+}
+
+.title {
+    margin-bottom: 100px;
+    font-family: 'Gotham Medium';
+    text-transform: uppercase;
+    font-size: 37px;
+    font-weight: normal;
+}
+
+header:after,
+.wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+    background: rgba(40, 40, 40, 0.5);
+    width: 100%;
+    top: 0;
+    height: 116px;
+    line-height: 115px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.6s;
+}
+
+.container .slide-item {
+    /*width: 100vw;*/
+    height: 100vh;
+}
+ 
+.slide-1 .container {
+    transform: translate(0, 0);
+}
+.slide-2 .container {
+    transform: translate(0, -100vh);
+}
+.slide-3 .container {
+    transform: translate(0, -200vh);
+}
+.slide-4 .container {
+    transform: translate(0, -300vh);
+}
+.slide-5 .container {
+    transform: translate(0, -400vh);
+}
+.slide-6 .container {
+    transform: translate(0, -500vh);
+}
+.slide-7 .container {
+    transform: translate(0, -600vh);
+}
+.slide-8 .container {
+    transform: translate(0, -700vh);
+}
+
+.wrapper {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+header h1, nav h1 {
+    height: 0;
+    text-indent: -10000px;
+}
+
+nav,
+#logo,
+.menu,
+.social {
+    float: left;
+}
+
+nav ul li a {
+    color: #fff;
+    font-family: 'Myriad Pro';
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+nav {
+    height: 100%;
+}
+
+nav ul li a:hover {
+    color: #11749e;
+}
+
+#logo img {
+    vertical-align: middle;
+}
+
+nav {
+    margin-left: 14%;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.menu li:last-child {
+    padding-right: 15px;
+}
+
+.menu li.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: #11749e;
+}
+
+.social {
+    line-height: 100%;
+    float: right;
+}
+
+.social li {
+    float: left;
+    width: 40px;
+    height: 117px;
+}
+
+.social li a {
+    background: url('/images/social.png') no-repeat center;
+}
+
+.social li:nth-child(1) a {
+    background-position: 0 center;
+}
+
+.social li:nth-child(2) a {
+    background-position: -45px center;
+}
+
+.social li:nth-child(3) a {
+    background-position: -87px center;
+}
+
+.social li:nth-child(4) a {
+    background-position: -127px center;
+}
+
+#intro {
+    position: relative;
+    background: url('/images/banner.jpg') no-repeat;
+}
+#intro h1 {
+    font-size: 10vw;
+    font-family: 'Gotham Bold';
+    text-transform: uppercase;
+    color: #f5f5f5;
+}
+
+#intro h4 {
+    color: #11749e;
+    font-family: 'Gotham Medium';
+    font-size: 1.8vw;
+    text-transform: uppercase;
+    letter-spacing: 16px;
+}
+
+#scroll-down {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+#scroll-down a {
+    display: block;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    line-height: 65px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+#scroll-down span {
+    font-family: 'Open Sans', Aril;
+    font-size: 13px;
+}
+
+.menu,
+.social,
+#blog ul,
+#about ul,
+#team ul,
+#map ul,
+#features ul.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#blog ul.column li,
+#team ul.column li {
+    width: 20%;
+}
+
+#team ul.column li {
+    position: relative;
+}
+
+#blog ul h4 {
+    font-family: 'Gotham Medium';
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #11749e;
+    margin: 10px 0;
+}
+
+#blog ul p {
+    font-family: 'Gotham Book';
+    font-size: 14px;
+    color: #222;
+}
+
+#blog ul li img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#blog .letter,
+#team .letter,
+#contact .letter {
+    color: #e2e2e2;
+}
+
+#contact .letter {
+    color: #5f5f61;
+}
+
+#blog .title,
+#team .title {
+    color: #222;
+}
+
+#about {
+    background: #11749e;
+    font-size: 0;
+}
+
+#about ul li {
+    width: 25%;
+    padding: 0 2%;
+}
+
+#about ul h4 {
+    margin-bottom: 35px;
+    font-family: 'Gotham Medium';
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#about ul p {
+    font-family: 'Gotham Book';
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.thumb-icon {
+    width: 135px;
+    height: 135px;
+    margin: 0 auto;
+    border-radius: 50%;
+    line-height: 135px;
+    margin-bottom: 20px;
+}
+
+#about ul li:nth-child(1) .thumb-icon {
+    background: url('/images/agency_icon1.png') no-repeat #2e85aa center;
+}
+
+#about ul li:nth-child(2) .thumb-icon {
+    background: url('/images/agency_icon1.png') no-repeat #2e85aa center;
+}
+
+#about ul li:nth-child(3) .thumb-icon {
+    background: url('/images/agency_icon3.png') no-repeat #2e85aa center;
+}
+
+#about ul li:nth-child(4) .thumb-icon {
+    background: url('/images/agency_icon4.png') no-repeat #2e85aa center;
+}
+
+
+#news {
+    font-size: 0;
+}
+
+#news ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#news li,
+#features .flex > li {
+    flex-basis: 50%;
+}
+
+#news li {
+    position: relative;
+}
+
+#news li > div,
+#features .flex > li > div {
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+#news li img {
+    width: 100%;
+    max-height: 50vh;
+}
+
+#news li h3,
+#features .flex > li h3 {
+    font-family: 'Gotham Medium';
+    font-size: 25px;
+    margin: 10px 0 30px;
+}
+
+#news li .date {
+    font-family: 'Gotham Book';
+    font-size: 13px;
+}
+
+#news li p,
+#features .flex > li p {
+    font-family: 'Gotham Book';
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#news li:nth-child(1) {
+    background: #222;
+}
+
+#news li:nth-child(4) {
+    background: #f3f3f3;
+    color: #222;
+}
+
+#features {
+    background: url('/images/features.jpg') no-repeat;
+    background-size: cover;
+}
+
+#features img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+}
+
+#features .flex > li {
+    position: relative;
+    height: 100vh;
+}
+
+#features .list {
+    margin-top: 50px;
+}
+
+#features .list li {
+    list-style: none;
+    background: #11749e;
+    padding: 11px 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Gothan Medium';
+    font-weight: normal;
+    font-size: 15px;
+}
+
+#features .list li:nth-child(1) {
+    width: 370px;
+}
+
+#features .list li:nth-child(2) {
+    width: 400px;
+}
+
+#features .list li:nth-child(3) {
+    width: 430px;
+}
+
+#team img {
+    max-height: 300px;
+}
+
+#team .name {
+    position: absolute;
+    width: 75%;
+    left: 50%;
+    bottom: -6%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #11749e;
+    font-family: 'Gotham Medium';
+    font-size: 1.1vw;
+}
+
+#team .name .position {
+    display: block;
+    margin-top: 8px;
+    color: #424242;
+    font-size: 0.8vw;
+    text-transform: none;
+}
+
+#contact {
+    background: url('/images/contact.jpg') no-repeat;
+    background-size: cover;
+}
+
+#contact form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#contact form textarea {
+    width: 100%;
+}
+
+#contact form input {
+    flex-basis: 30%;
+}
+
+#contact form input,
+#contact form textarea {
+    margin-bottom: 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+#contact form input::-webkit-input-placeholder,
+#contact form textarea::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+    font-family: 'Gotham Book';
+    font-size: 15px;
+}
+
+#contact form input::-moz-placeholder,
+#contact form textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    font-family: 'Gotham Book';
+    font-size: 15px;
+}
+
+#contact form input:-ms-input-placeholder,
+#contact form textarea:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    font-family: 'Gotham Book';
+    font-size: 15px;
+}
+
+#contact form input:-moz-placeholder,
+#contact form textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    font-family: 'Gotham Book';
+    font-size: 15px;
+}
+
+#contact form button {
+    display: block;
+    width: 228px;
+    margin: auto;
+    cursor: pointer;
+    line-height: 66px;
+    background: #11749e;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Gotham Medium';
+    font-size: 24px;
+    border: none;
+}
+
+#map {
+    background: #222;
+    font-family: 'Roboto';
+    font-size: 13px;
+}
+
+#map .wrapper ul {
+    margin-top: 43px;
+}
+
+.footer-bee {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('/images/footer_bee.png') no-repeat center bottom;
+}
